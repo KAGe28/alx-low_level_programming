@@ -11,7 +11,7 @@
   */
 
 /**
-  * bs  - computes the absolute value of an integer
+  * _abs - computes the absolute value of an integer
   * @n: the number that will be checked
   *
   * Return: the absolute value
@@ -32,7 +32,7 @@ int _abs(int n)
 int print_last_digit(int n)
 {
 	int u;
-	
+
 	u = n % 10;
 
 	_putchar(_abs(u) + '0');
