@@ -2,21 +2,19 @@
 
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+  * _abs - Computes the absolute value of integer
+  * @n: the number that will be checked
+  *
+  * Return: The absolute value
+  */
+
 /**
   * print_last_digit - prints the last digit of a number
   * @n: the number that will be checked
   *
   * Return: the last digit
   */
-
-/*
- * _abs - computes the absolute value of an integer
- * @n: the number that will be checked
- * description: Computes the absolute value of an integer
- *
- * Return: the absolute value
- */
 
 int _abs(int n)
 {
