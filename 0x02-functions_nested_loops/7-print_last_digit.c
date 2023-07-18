@@ -9,13 +9,6 @@
   * Return: The absolute value
   */
 
-/**
-  * print_last_digit - prints the last digit of a number
-  * @n: the number that will be checked
-  *
-  * Return: the last digit
-  */
-
 int _abs(int n)
 {
 	if (n >= 0)
@@ -27,6 +20,13 @@ int _abs(int n)
 		return ((-1) * n);
 	}
 }
+
+/**
+  * print_last_digit - prints the last digit of a number
+  * @n: the number that will be checked
+  *
+  * Return: the last digit
+  */
 
 int print_last_digit(int n)
 {
