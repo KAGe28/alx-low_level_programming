@@ -35,6 +35,6 @@ int print_last_digit(int n)
 	
 	u = n % 10;
 
-	putchar(_abs(u));
+	_putchar(_abs(u));
 	return (_abs(u));
 }
