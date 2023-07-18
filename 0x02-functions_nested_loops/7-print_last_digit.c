@@ -4,18 +4,18 @@
 
 /* betty style doc for function main goes there */
 /**
-  * print_last_digit  - prints the last digit of a number
+  * print_last_digit - prints the last digit of a number
   * @n: the number that will be checked
   *
   * Return: the last digit
   */
 
-/**
-  * _abs - computes the absolute value of an integer
-  * @n: the number that will be checked
-  *
-  * Return: the absolute value
-  */
+/*
+ * _abs - computes the absolute value of an integer
+ * @n: the number that will be checked
+ *
+ * Return: the absolute value
+ */
 
 int _abs(int n)
 {
