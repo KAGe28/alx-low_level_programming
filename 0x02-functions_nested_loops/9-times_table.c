@@ -20,7 +20,7 @@ void times_table(void)
 		for (n = 0; n < 10; n++)
 		{
 			t = i * n;
-			putchar(t + '0');
+			_putchar(t + '0');
 			if (n < 9)
 			{
 				_putchar(',');
