@@ -17,7 +17,7 @@
   * Return: the absolute value
   */
 
-int print_sign(int n)
+int _abs(int n)
 {
 	if (n >= 0)
 	{
