@@ -10,21 +10,21 @@
   */
 int main(void)
 {
-	unsigned long int n = 98;
-	unsigned long int prev = 1;
-	unsigned long int forw = 2;
-	unsigned long int next = 0;
-	unsigned long int i;
+	long int n = 98;
+	long int prev = 1;
+	long int forw = 2;
+	long int next = 0;
+	long int i;
 
-	printf("%lu, ", prev);
-	printf("%lu,, ", forw);
+	printf("%ld, ", prev);
+	printf("%ld,, ", forw);
 
 	for (i = 2; i < n; i++)
 	{
 		next = prev + forw;
 		prev = forw;
 		forw = next;
-		printf("%lu", next);
+		printf("%ld", next);
 		if (i < (n - 1))
 			printf(", ");
 	}
