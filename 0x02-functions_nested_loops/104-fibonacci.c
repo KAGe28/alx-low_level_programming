@@ -14,7 +14,7 @@ int main(void)
 	unsigned int prev = 1;
 	unsigned int forw = 2;
 	unsigned int next = 0;
-	int i;
+	unsigned int i;
 
 	printf("%i, ", prev);
 	printf("%i, ", forw);
