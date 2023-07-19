@@ -16,15 +16,15 @@ int main(void)
 	unsigned int next = 0;
 	int i;
 
-	printf("%lu, ", prev);
-	printf("%lu, ", forw);
+	printf("%i, ", prev);
+	printf("%i, ", forw);
 
 	for (i = 2; i < n; i++)
 	{
 		next = prev + forw;
 		prev = forw;
 		forw = next;
-		printf("%lu", next);
+		printf("%i", next);
 		if (i < (n - 1))
 			printf(", ");
 	}
