@@ -4,9 +4,9 @@
 
 /* betty style doc for function main goes there */
 /**
-  * print_alphabet - Prints the alphabet in lowercase
+  * main - Entry point
   *
-  * Return: void
+  * Return: Always 0 (sucess)
   */
 int main(void)
 {
@@ -15,11 +15,11 @@ int main(void)
 	long int forw = 2;
 	long int next = 0;
 	int i;
-	
+
 	printf("%ld, ", prev);
 	printf("%ld, ", forw);
 
-	for (i = 0; i < n; i++)
+	for (i = 2; i < n; i++)
 	{
 		next = prev + forw;
 		prev = forw;
