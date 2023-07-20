@@ -21,9 +21,9 @@ void print_times_table(int n)
 	}
 	else
 	{
-		for (i = 0; i < n; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j < n; j++)
+			for (j = 0; j <= n; j++)
 			{
 				t = i * j;
 
@@ -43,7 +43,7 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(t + '0');
 				}
-				else if (t > 10 && t < 100)
+				else if (t >= 10 && t < 100)
 				{
 					_putchar(' ');
 					_putchar((t / 10 % 10) + '0');
