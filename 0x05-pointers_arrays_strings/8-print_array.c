@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
-  * _puts2 - prints every other character of a string followed by a new line to stdout
-  * @str: a pointer to a character
+  * print_array - prints n elements of an array of integers
+  * @a: a pointer to a integer
+  * @n: the number of elements of the array
   * Return: nothing
   */
 
