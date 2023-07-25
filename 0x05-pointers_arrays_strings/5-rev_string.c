@@ -30,14 +30,15 @@ void rev_string(char *s)
 {
 	int i = 0;
 	int l = 0;
-	int start = 0;
-	char *tmp;
+	int j = 0;
+	char temp;
 
 	l = _strlen(s);
 
-	for (i = l - 1; i >= 0; i--, start++)
-		*(tmp + start) = s[i];
-	i = 0;
-       while (*(s + i) != '\0')	
-	_putchar('\n');
+	for (i = 0, j = l - 1; i < j; i++, j--)
+	{
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
+	}
 }
