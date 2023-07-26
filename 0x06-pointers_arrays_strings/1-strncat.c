@@ -20,25 +20,24 @@ int _strlen(char *s)
 }
 
 /**
-  * _strcat - Concatenates two strings
+  * _strncat - Concatenates two strings
   * @dest: a pointer to the first string
   * @src: a pointer to the second character
+  * @n: number of bytes
   * Return: a pointer to the resulting string dest
   */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
+	int i;
 	int l;
 
 	l = _strlen(dest);
 
-	while (*(src + i) != '\0')
-	{
-		*(dest + l) = src[i];
-		i++;
-		l++;
-	}
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[l + i] = src[i];
+	dest[l + i] = '\0';
+
 	return (dest);
 }
 

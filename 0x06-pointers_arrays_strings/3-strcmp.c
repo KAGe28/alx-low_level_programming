@@ -20,25 +20,25 @@ int _strlen(char *s)
 }
 
 /**
-  * _strcat - Concatenates two strings
-  * @dest: a pointer to the first string
-  * @src: a pointer to the second character
+  * _strcmp - Compares two strings
+  * @s1: a pointer to the first string
+  * @s2: a pointer to the second character
   * Return: a pointer to the resulting string dest
   */
 
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int l;
+	int l1;
+	int l2;
 
-	l = _strlen(dest);
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
 
-	while (*(src + i) != '\0')
-	{
-		*(dest + l) = src[i];
-		i++;
-		l++;
-	}
-	return (dest);
+	if (l1 == l2)
+		return (0);
+	if (l1 < l2)
+		return (-15);
+	if (l1 > l2)
+		return (15);
 }
 
