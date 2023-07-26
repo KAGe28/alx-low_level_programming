@@ -31,15 +31,17 @@ int _strcmp(char *s1, char *s2)
 {
 	int l1;
 	int l2;
+	int r;
 
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
 
 	if (l1 == l2)
-		return (0);
+		r = 0;
 	if (l1 < l2)
-		return (-15);
+		r = -15;
 	if (l1 > l2)
-		return (15);
+		r = 15;
+	return (r);
 }
 
