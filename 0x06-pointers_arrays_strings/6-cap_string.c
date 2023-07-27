@@ -22,7 +22,7 @@ int is_special(char c)
 /**
   * cap_string - Capitalize all words of string
   * @s: a pointer to the string
-  * Return: a pointer to the resulting string dest
+  * Return: a pointer to the resulting string s
   */
 
 char *cap_string(char *s)
