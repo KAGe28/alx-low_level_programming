@@ -1,34 +1,22 @@
 #include "main.h"
 
 /**
-  * _islower - checks for lowercase character
+  * is_special - checks for special character
   * @c: the character that will be checked
-  * Return: 1 if c is lowercase, 0 otherwise
+  * Return: 1 if c is a special character, 0 otherwise
   */
 
-int _islower(int c)
+int is_special(char c)
 {
-	c = (c >= 97 && c <= 122) ? 1 : 0;
+	int i;
+	char specials[] = " \t\n,;.!\?\"(){}";
 
-	return (c);
-}
-
-/**
-  * _toupper - Converts a lowercase character to uppercase one
-  * @c: the character that will be converted
-  * Return: c to uppercase
-  */
-
-char _toupper(char c)
-{
-	if (_islower(c))
+	for (i = 0; specials[i] != '\0'; i++)
 	{
-		return (c - 32);
+		if (c == specials[i])
+			return (1);
 	}
-	else
-	{
-		return (c);
-	}
+	return (0);
 }
 
 /**
@@ -40,56 +28,15 @@ char _toupper(char c)
 char *cap_string(char *s)
 {
 	int i;
+	int cap = 1;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
-			s[i] = _toupper(s[i]);
-		switch (s[i - 1])
+		if (cap && s[i] >= 'a' && s[i] <= 'z')
 		{
-			case ' ':
-				s[i] = _toupper(s[i]);
-				break;
-			case '\t':
-				s[i] = _toupper(s[i]);
-				break;
-			case '\n':
-				s[i] = _toupper(s[i]);
-				break;
-			case ',':
-				s[i] = _toupper(s[i]);
-				break;
-			case ';':
-				s[i] = _toupper(s[i]);
-				break;
-			case '.':
-				s[i] = _toupper(s[i]);
-				break;
-			case '!':
-				s[i] = _toupper(s[i]);
-				break;
-			case '\?':
-				s[i] = _toupper(s[i]);
-				break;
-			case '\"':
-				s[i] = _toupper(s[i]);
-				break;
-			case '(':
-				s[i] = _toupper(s[i]);
-				break;
-			case ')':
-				s[i] = _toupper(s[i]);
-				break;
-			case '{':
-				s[i] = _toupper(s[i]);
-				break;
-			case '}':
-				s[i] = _toupper(s[i]);
-				break;
-			default:
-				s[i] = s[i];
-				break;
+			s[i] = s[i] - 'a' + 'A';
 		}
+		capitalize = is_special(s[i]);
 	}
 
 	return (s);
