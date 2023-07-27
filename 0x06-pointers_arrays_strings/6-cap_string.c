@@ -36,7 +36,7 @@ char *cap_string(char *s)
 		{
 			s[i] = s[i] - 'a' + 'A';
 		}
-		capitalize = is_special(s[i]);
+		cap = is_special(s[i]);
 	}
 
 	return (s);
