@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 	l2 = _strlen(needle);
 
 	if (l2 == 0)
-		return (NULL);
+		return (haystack);
 
 	for (i = 0; i <= l1 - l2 + 1; i++)
 	{
