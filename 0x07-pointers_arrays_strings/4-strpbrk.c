@@ -17,11 +17,11 @@ int _strlen(char *s)
 }
 
 /**
-  * _strpbrk - Locates a character in a string
+  * _strpbrk - Searchs a string for any of a set of bytes
   * @s: a pointer to the string in which the character is looked for
   * @accept: the character to be found
-  * Return: a pointer to the first occurence of the character c
-  */
+  * Return: a pointer to the byte in s, Otherwise NULL
+ */
 
 char *_strpbrk(char *s, char *accept)
 {

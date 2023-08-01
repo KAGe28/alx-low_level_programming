@@ -17,10 +17,10 @@ int _strlen(char *s)
 }
 
 /**
-  * _strspn - Locates a character in a string
+  * _strspn - Gets the length of a prefic substring
   * @s: a pointer to the string in which the character is looked for
   * @accept: the character to be found
-  * Return: a pointer to
+  * Return: the number of bytes in initial segments of s
   */
 
 unsigned int *_strspn(char *s, char *accept)
@@ -33,7 +33,7 @@ unsigned int *_strspn(char *s, char *accept)
 
 	n = 0;
 	l1 = _strlen(s);
-	l2 = _strlen (accept);
+	l2 = _strlen(accept);
 
 	for (i = 0; i <= l1; i++)
 	{
@@ -50,4 +50,5 @@ unsigned int *_strspn(char *s, char *accept)
 			break;
 		}
 	}
+	return (n);
 }

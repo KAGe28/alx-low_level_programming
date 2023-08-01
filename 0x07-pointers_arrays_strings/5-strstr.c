@@ -17,10 +17,10 @@ int _strlen(char *s)
 }
 
 /**
-  * _strchr - Locates a character in a string
-  * @s: a pointer to the string in which the character is looked for
-  * @c: the character to be found
-  * Return: a pointer to the first occurence of the character c
+  * _strstr - Locates a substring
+  * @haystack: a pointer to the string in which the character is looked for
+  * @needle: the character to be found
+  * Return: a pointer to the beginning of the located substring or NULL
   */
 
 char *_strstr(char *haystack, char *needle)

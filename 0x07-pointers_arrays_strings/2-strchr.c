@@ -20,7 +20,7 @@ int _strlen(char *s)
   * _strchr - Locates a character in a string
   * @s: a pointer to the string in which the character is looked for
   * @c: the character to be found
-  * Return: a pointer to the first occurence of the character c
+  * Return: a pointer to the first occurence of the character c otherwise NULL
   */
 
 char *_strchr(char *s, char c)

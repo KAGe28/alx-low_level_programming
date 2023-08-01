@@ -17,7 +17,7 @@ int _strlen(char *s)
 }
 
 /**
-  * print_chessboard - Locates a character in a string
+  * print_chessboard -Prints the chessboard 
   * @a: a pointer to a char
   * Return: nothing
   */
