@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int i;
-	int l;
+	int l = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 		l += 1;
@@ -33,7 +33,10 @@ char *_strstr(char *haystack, char *needle)
 	l1 = _strlen(haystack);
 	l2 = _strlen(needle);
 
-	for (i = 0; i <= l1 - l2; i++)
+	if (l2 == 0)
+		return (NULL);
+
+	for (i = 0; i <= l1 - l2 + 1; i++)
 	{
 		j = 0;
 

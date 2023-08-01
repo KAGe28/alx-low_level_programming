@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int i;
-	int l;
+	int l = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 		l += 1;
@@ -34,6 +34,9 @@ unsigned int _strspn(char *s, char *accept)
 	n = 0;
 	l1 = _strlen(s);
 	l2 = _strlen(accept);
+
+	if (l1 == 0 || l2 == 0)
+		return (0);
 
 	for (i = 0; i <= l1; i++)
 	{
