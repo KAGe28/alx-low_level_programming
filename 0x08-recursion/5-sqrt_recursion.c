@@ -3,26 +3,22 @@
 /**
   * _sqrt_check - check for natural square root
   * @n: The number to check
+  * @i: counter like loop
+  * @count: square root
   * Return: square root of n, -1 otherwise
   */
 
-int _sqrt_check(int n)
+int _sqrt_check(int n, int i, int count)
 {
-	int i = 0;
-	int count = 0;
-
-	while (n > 0)
-	{
-		if (i % 2 != 0)
-		{
-			n -= i;
-			count++;
-		}
-		i++;
-	}
 	if (n == 0)
 		return (count);
-	return (-1);
+
+	if (i % 2 != 0)
+	{
+		n -= i;
+		count++;
+	}
+	return (_sqrt_check(n, i + 1, count));
 }
 
 /**
@@ -33,7 +29,5 @@ int _sqrt_check(int n)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	return (_sqrt_check(n));
+	return (_sqrt_check(n, 0, 0));
 }
