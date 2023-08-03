@@ -29,5 +29,7 @@ int _sqrt_check(int n, int i, int count)
 
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1);
 	return (_sqrt_check(n, 0, 0));
 }
