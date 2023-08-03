@@ -1,4 +1,4 @@
-#include "mainh"
+#include "main.h"
 
 /**
   * _puts_recursion - prints a string
@@ -16,5 +16,5 @@ void _puts_recursion(char *s)
 		return;
 	}
 	putchar(s[i]);
-	_puts_recursion(s +1);
+	_puts_recursion(s + 1);
 }
