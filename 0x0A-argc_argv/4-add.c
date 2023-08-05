@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			if (islower(*argv[i]))
+			if (isalpha(*argv[i]))
 			{
 				printf("Error\n");
 				return (1);
