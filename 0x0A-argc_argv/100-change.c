@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
 {
 	int cents = 0;
 	int n = 0;
+	int coins [] = {25, 10, 5, 2, 1};
+	int size = sizeof(coins) / sizeof(coins[0]);
 
 	if (argc != 2)
 	{
@@ -23,34 +25,13 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-
-	else
+	n = atoi(argv[1]);
+	for (i = 0; i < size && n > 0; i++)
 	{
-		n = atoi(argv[1]);
-
-		while (n != 0)
+		while (n >= coins[i])
 		{
-			if (n >= 25)
-			{
-				n -= 25;
-			}
-			else if (n >= 10)
-			{
-				n  -= 10;
-			}
-			else if (n >= 5)
-			{
-				n -= 5;
-			}
-			else if (n >= 2)
-			{
-				n -= 2;
-			}
-			else
-			{
-				n -= 1;
-			}
-				cents++;
+			n -= coins[i];
+			cents++;
 		}
 
 	}
