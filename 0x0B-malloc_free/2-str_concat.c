@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
   * _strlen - returns the length of a string
   * @s: a pointer to a char
@@ -14,7 +13,6 @@ int _strlen(char *s)
 		l++;
 	return (l);
 }
-	
 
 /**
   * str_concat - concatenantes two string
@@ -28,9 +26,14 @@ char *str_concat(char *s1, char *s2)
 	int i, j, l1, l2;
 	char *concat = NULL;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
-
 	concat = malloc(sizeof(char) * (l1 + l2 + 1));
 
 	if (concat == NULL)
