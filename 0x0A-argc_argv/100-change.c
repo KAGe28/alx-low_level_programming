@@ -10,6 +10,7 @@
 
 int main(int argc, char *argv[])
 {
+	int i;
 	int cents = 0;
 	int n = 0;
 	int coins [] = {25, 10, 5, 2, 1};
