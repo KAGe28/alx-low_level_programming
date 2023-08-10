@@ -61,7 +61,6 @@ char **strtow(char *str)
 			if (str[j] != ' ')
 			{
 				split[i][j] = str[j];
-				k++;
 			}
 		}
 		split[i][j] = '\0';
