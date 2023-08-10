@@ -22,15 +22,15 @@ int _strlen(char *s)
 
 char **strtow(char *str)
 {
-	int i, j, k, l1, l2;
+	int i, j, l1, l2;
 	char **split = NULL;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 	l1 = 0;/*get full length*/
 	l2 = 0;/*get number of element*/
 
-	for (i = 0; i < str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
 			l1++;
@@ -54,18 +54,17 @@ char **strtow(char *str)
 			free(split);
 		}
 	}
-	k = 0;
 	for (i = 0; i < l2; i++)
 	{
-		for (j = 0; str[i][j] != '\0'; j++)
+		for (j = 0; str[j] != '\0'; j++)
 		{
 			if (str[j] != ' ')
 			{
-				split[k][j] = str[j];
+				split[i][j] = str[j];
 				k++;
 			}
 		}
-		split[k][j] = '\0';
+		split[i][j] = '\0';
 
 	}
 
