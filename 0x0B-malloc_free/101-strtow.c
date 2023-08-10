@@ -34,11 +34,9 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 			l1++;
-		if (str[i] == ' ' && str[i - 1] != ' ')
-			l2++;
-		l1++;
+		l2++;
 	}
-	split = malloc(sizeof(char *) * l2);
+	split = malloc(sizeof(char *) * l2 + 1);
 	
 	if (split == NULL)
 		return (NULL);
