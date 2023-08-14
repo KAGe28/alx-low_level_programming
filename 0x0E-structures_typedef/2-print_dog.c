@@ -1,8 +1,9 @@
 #include "dog.h"
 
 /**
-  * init_dog - initialize a variable of type struct
+  * print_dog - print a struct dog
   * @d: a pointer to struct dog
+  * Return: Nothing
   */
 
 void print_dog(struct dog *d)
@@ -10,7 +11,6 @@ void print_dog(struct dog *d)
 	if (d == NULL)
 	{
 		printf("\n");
-	
 	}
 	else
 	{

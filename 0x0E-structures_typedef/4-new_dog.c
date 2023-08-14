@@ -5,6 +5,7 @@
   * @name: a pointer to a string
   * @age: a float
   * @owner: a pointer to a string
+  * Return: a new dog
   */
 
 dog_t *new_dog(char *name, float age, char *owner)
