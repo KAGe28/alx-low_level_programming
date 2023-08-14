@@ -8,6 +8,8 @@
 #define NULL ((void *)0)
 #endif /* NULL */
 
+
+
 /**
   * struct dog - a structure that define a dog
   * @name: name of the dog
@@ -25,7 +27,6 @@ struct dog
 /**
   * dog_t - typedef for type struct dog
   */
-
 typedef struct dog dog_t;
 
 int _putchar(char c);
