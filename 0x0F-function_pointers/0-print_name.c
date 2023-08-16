@@ -13,5 +13,7 @@ void print_name(char *name, void (*f)(char *))
 
 	fun = f;
 
+	if (name == NULL)
+		exit(EXIT_FAILURE);
 	fun(name);
 }
