@@ -9,11 +9,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	void (*fun)(char *);
-
-	fun = f;
-
 	if (name == NULL)
 		exit(EXIT_FAILURE);
-	fun(name);
+	f(name);
 }
