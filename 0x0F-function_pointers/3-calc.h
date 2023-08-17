@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <string.h>
+
 /**
   * struct op - Struct op
   *
@@ -12,6 +14,10 @@ typedef struct op
 	char *op;
 	int (*f)(int a, int b);
 } op_t;
+
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
