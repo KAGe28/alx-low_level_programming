@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	if (get_op_func(op) == NULL)
+	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	result = get_op_func(op)(a, b);
+	result = get_op_func(argv[2])(a, b);
 
 	printf("%d\n", result);
 
