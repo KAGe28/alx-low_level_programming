@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	if (num < 0)
 	{
 		printf("%d\n", 0);
-		exit(EXIT_SUCCESS);
+		return (0);
 	}
 	for (i = 0; i < 5; i++)
 	{
@@ -43,5 +43,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", cents);
-	exit(EXIT_SUCCESS);
+	return (0);
 }
