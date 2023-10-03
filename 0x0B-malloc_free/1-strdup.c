@@ -28,8 +28,6 @@ char *_strdup(char *str)
 
 	l = _strlen(str);
 
-	printf("%d\n", l);
-
 	if (str == NULL)
 		return (NULL);
 	new_str = malloc(sizeof(char) * (l + 1));
