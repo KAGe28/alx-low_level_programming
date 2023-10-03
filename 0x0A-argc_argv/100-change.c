@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, num;
+	int i;
+	int num = 0;
 	int count = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
