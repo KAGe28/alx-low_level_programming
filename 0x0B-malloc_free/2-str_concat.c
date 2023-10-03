@@ -29,13 +29,13 @@ char *str_concat(char *s1, char *s2)
 	int l1 = 0;
 	int l2 = 0;
 
-	l1 = _strlen(s1);
-	l2 = _strlen(s2);
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
 	str = malloc(sizeof(char) * (l1 + l2 + 1));
 
 	if (str == NULL)
