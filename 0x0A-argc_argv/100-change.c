@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int num = 0;
-	int count = 0;
+	int cents = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 		while (num >= coins[i])
 		{
 			num -= coins[i];
-			count++;
+			cents++;
 		}
 	}
-	printf("%d\n", count);
+	printf("%d\n", cents);
 	exit(EXIT_SUCCESS);
 }
