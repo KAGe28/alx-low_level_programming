@@ -9,29 +9,23 @@
 
 int main(int argc, char *argv[])
 {
-	int a = 0;
-	int b = 0;
-	int res = 0;
+	int value = 0;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
 
-	if (!get_op_func(argv[2])(a, b))
+	f = get_op_func(argv[2]);
+
+	if (!f)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	res = get_op_func(argv[2])(a, b);
-	printf("%d\n", res);
+	value = f(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", value);
 	return (0);
 }
